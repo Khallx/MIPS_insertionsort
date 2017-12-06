@@ -29,7 +29,7 @@ architecture structural of DataPath is
 
 begin
     --instruction to be decoded by the control block
-    flg.instruction <= instruction(31 downto 26);
+    flg.instruction <= instruction;
     -- Retrieves the rs field from the instruction
     rs <= instruction(25 downto 21);
     -- Retrieves the rt field from the instruction
@@ -38,8 +38,6 @@ begin
     rd <= instruction(15 downto 11);
     --holds the constant part of instructions
     immediate <= instruction(15 downto 0);
-    --holds the ALU function for R type instructions
-    flg.funct <= instruction(5 downto 0);
 
 
     MUXpc <= ALUout when ctrl.PCSource = '1' else result;
@@ -142,7 +140,7 @@ begin
             operand2    => ALUoperand2,
             result      => result,
             zero        => flg.zero,
-            operation   => ctrl.ALUOp
+            operation   => cmd.ALUop
         );
 
 
