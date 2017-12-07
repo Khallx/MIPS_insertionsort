@@ -29,8 +29,9 @@ begin
 
     result <= STD_LOGIC_VECTOR(temp);
 
-    temp <= op1 - op2               when operation = BEQ or operation = BNE else
-            op1 or  op2             when operation = ORI else
+    temp <= op1 - op2               when operation = SUB or operation = BEQ or operation = BNE else
+            op1 and op2             when operation = AAND else
+            op1 or  op2             when operation = OOR or operation = ORI else
             op1 xor op2             when operation = XXOR else
             (0=>'1', others=>'0')   when operation = SLT and SIGNED(op1) < SIGNED(op2) else
             (others=>'0')           when operation = SLT and not SIGNED(op1) < SIGNED(op2) else
