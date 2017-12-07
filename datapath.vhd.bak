@@ -159,6 +159,6 @@ begin
         );
 
     --memory interface
-    address <= ALUout when ctrl.IorD = '1' else PC;
+    adress <= ALUout when ctrl.IorD = '1' else PC;
     data_out <= B;
 end architecture;

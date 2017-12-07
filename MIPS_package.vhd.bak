@@ -16,7 +16,8 @@ package MIPS_package is
         RegDst   : std_logic;       --controls which input chooses the register to be written
         WrIR     : std_logic;       --writes on instruction register
         MemToReg : std_logic;       --active for when writing memory data in the register file
-        WrMem    : std_logic;        --RAM write control (we dont use memread (the memory does not need it))
+        WrMem    : std_logic;        --RAM write control
+        RdMem    : std_logic;         --RAM read control
         WrMDR    : std_logic;        --writes the memory data register
         IorD     : std_logic;        --controls instruction or data memory addressing
         WrA, WrB : std_logic;       --controls a and b registers from register file data
