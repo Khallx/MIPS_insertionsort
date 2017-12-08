@@ -36,7 +36,9 @@ begin
             (others=>'0')           when operation = SLT and not SIGNED(op1) < SIGNED(op2) else
             (0=>'1', others=>'0')   when operation = SLTU and op1 < op2 else
             (others=>'0')           when operation = SLTU and not (op1 < op2) else
+            shift_left(op1, TO_INTEGER(op2(10 downto 6))) when operation = SSLL else     --for SLL, we shift the amount in the shamt part of the instruction
             op2(15 downto 0) & x"0000"           when operation = LUI else
+            (others=>'X')           when operation = INVALID_INSTRUCTION else
             op1 + op2;    -- default for ADD, ADDI, SW, LW
 
     -- Generates the zero flag

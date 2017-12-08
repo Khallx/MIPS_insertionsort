@@ -41,6 +41,7 @@ begin
 
 
     MUXpc <= ALUout when ctrl.PCSource = '1' else result;
+
     Pogram_counter: entity work.RegisterNbits
         generic map(
             LENGTH => 32,
@@ -82,7 +83,7 @@ begin
 
     --selects which register is written on based on instruction
     MUX_RF: writeRegister <= rd when ctrl.RegDst = '1' else rt;
-
+    writeData <= MDR when ctrl.MemToReg = '1' else ALUout;
     Register_file: entity work.RegisterFile
         port map(
             clock   => clock,
@@ -125,7 +126,7 @@ begin
         );
 
     ext_immediate(15 downto 0) <= immediate;    --extends signal
-    ext_immediate(31 downto 16) <= x"ffff" when immediate(immediate'left) = '1' else x"0000";
+    ext_immediate(31 downto 16) <= x"ffff" when immediate(15) = '1' else x"0000";
     --register that stores ULA results
 
     ALUoperand1 <= A when ctrl.ALUSrcA = '1' else PC;
