@@ -83,7 +83,9 @@ begin
 
     --selects which register is written on based on instruction
     MUX_RF: writeRegister <= rd when ctrl.RegDst = '1' else rt;
+    --chooses which data is written in register file
     writeData <= MDR when ctrl.MemToReg = '1' else ALUout;
+
     Register_file: entity work.RegisterFile
         port map(
             clock   => clock,
