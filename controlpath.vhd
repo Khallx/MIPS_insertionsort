@@ -92,19 +92,17 @@ begin
         end if;
     end process;
 
-    --all command signals are only state based (moore FSM)
-    --currently only has type R conditions!!!!!
+    
+    --note that some signals are mealy (depend on state and input)
     ctrl.PCSource <= '1' when cs = s6 else '0';
     ctrl.WrPC <= '1' when cs = s0  or (cs = s6 and ((opcode = "000100" and flg.zero = '1')  or (opcode = "000101" and flg.zero = '0'))) else '0';
-    --ctrl.PCconditional <= '1' when cs = s6 and ((opcode = "000100" and flg.zero = '1')  or (opcode = "000101" and flg.zero = '0')) else '0';
-    ctrl.PCconditional <= '0';  --maybe delete this later
     ctrl.WrRfile <= '1' when cs = s3 or cs = s5 or cs = s9 else '0';
     ctrl.RegDst <= '1' when cs = s3 else '0';
     ctrl.WrIR <= '1' when cs = s0 else '0';
     ctrl.MemToReg <= '1' when cs = s9 else '0';
     ctrl.WrMem <= '1' when cs = s8 and opcode = "101011" else '0';  --for sw
     ctrl.WrMDR <= '1' when cs = s8 and opcode = "100011" else '0';  --for lw
-    ctrl.IorD <= '1' when cs = s8 else '0';
+    ctrl.IorD <= '1' when cs = s8 else '0';                         --Selects instruction address or Data address
     ctrl.WrA <= '1' when cs = s1 else '0';
     ctrl.WrB <= '1' when cs = s1 else '0';
     ctrl.ALUSrcB <= "11" when cs = s1 else

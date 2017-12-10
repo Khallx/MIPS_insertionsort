@@ -11,9 +11,9 @@ entity DataPath is
     port (
         clock               : in  std_logic;
         reset               : in  std_logic;
-        Address           : out std_logic_vector(31 downto 0);  -- Data memory address bus
-        data_in           : in  std_logic_vector(31 downto 0);  -- Data bus from data memory
-        data_out          : out std_logic_vector(31 downto 0);  -- Data bus to data memory
+        Address           : out std_logic_vector(31 downto 0);
+        data_in           : in  std_logic_vector(31 downto 0);
+        data_out          : out std_logic_vector(31 downto 0);
         ctrl              : in  control;                        --control path controls
         flg               : out flags                            --control path flags
     );
@@ -21,10 +21,10 @@ end DataPath;
 
 
 architecture structural of DataPath is
-    signal instruction, pc, MUXpc, MDR, result, readData1, readData2, A, B, ALUoperand1, ALUoperand2, ALUout, offset32bits, writeData: std_logic_vector(31 downto 0);
+    signal instruction, pc, MUXpc, MDR, result, readData1, readData2, A, B, ALUoperand1, ALUoperand2, ALUout, writeData: std_logic_vector(31 downto 0);
     signal rs, rt, rd : std_logic_vector(4 downto 0);
     signal writeRegister : std_logic_vector(4 downto 0);
-    signal immediate : std_logic_vector(15 downto 0);   --holds the constant part of instructions
+    signal immediate : std_logic_vector(15 downto 0);       --holds the constant part of instructions
     signal ext_immediate : std_logic_vector(31 downto 0);   --immediate with extended signal
 
 begin
@@ -82,7 +82,7 @@ begin
         );
 
     --selects which register is written on based on instruction
-    MUX_RF: writeRegister <= rd when ctrl.RegDst = '1' else rt;
+    writeRegister <= rd when ctrl.RegDst = '1' else rt;
     --chooses which data is written in register file
     writeData <= MDR when ctrl.MemToReg = '1' else ALUout;
 
@@ -129,7 +129,7 @@ begin
 
     ext_immediate(15 downto 0) <= immediate;    --extends signal
     ext_immediate(31 downto 16) <= x"ffff" when immediate(15) = '1' else x"0000";
-    --register that stores ULA results
+
 
     ALUoperand1 <= A when ctrl.ALUSrcA = '1' else PC;
 
@@ -147,7 +147,7 @@ begin
             operation   => ctrl.ALUop
         );
 
-
+    --register that stores ULA results
     ALU_out: entity work.RegisterNbits
         generic map(
             LENGTH => 32,

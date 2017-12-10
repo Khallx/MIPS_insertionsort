@@ -11,7 +11,7 @@ end MIPS_multiciclo;
 architecture structural of MIPS_multiciclo is
     constant PC_START_ADDRESS : std_logic_vector(31 downto 0) := x"00400000";
     constant START : integer := TO_INTEGER(UNSIGNED(PC_START_ADDRESS));
-    constant size : integer := 64; --memory size
+    constant size : integer := 100; --memory size
 
     signal clock: std_logic := '0';
     signal reset : std_logic := '1';
@@ -49,7 +49,7 @@ begin
     generic map(
         SIZE => SIZE,
         START_ADDRESS => PC_START_ADDRESS,
-        imageFileName => "test.txt"
+        imageFileName => "InsertionSort.txt"
     )
     port map(
         clock => clock,

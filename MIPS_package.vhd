@@ -8,9 +8,8 @@ package MIPS_package is
     type control is record
         PCSource : std_logic;
         WrPC     : std_logic;
-        PCconditional : std_logic;  --for conditional jumps
         ALUOp    : operation_type;           --ALU operation from assembly code
-        ALUSrcB  : std_logic_vector(1 downto 0);
+        ALUSrcB  : std_logic_vector(1 downto 0);     --controls Alu operands A and B
         ALUSrcA  : std_logic;
         WrRfile  : std_logic;        --controls register file writing
         RegDst   : std_logic;       --controls which input chooses the register to be written
@@ -25,6 +24,6 @@ package MIPS_package is
 
     type flags is record
         zero : std_logic;   --zero flag
-        instruction : std_logic_vector(31 downto 0); --relevant part of the instruction for the control block
+        instruction : std_logic_vector(31 downto 0); 
     end record;
 end package;

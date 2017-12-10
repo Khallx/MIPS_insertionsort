@@ -18,7 +18,6 @@ start:
 	la $s1, array	 	#s1 holds pointer to array
 	la $s2, size
 	lw $s2, 0($s2) 	        #s2 holds size value
-	sll $s2, $s2, 2	        #we multiply size by 4 to compare it to i
 	lw $s6, 0($s6)          #s6 holds order
 	lw $s7, 0($s7)          #s7 holds signedData
 	addi $t1, $0, 4		#i <- 1 (4bytes of width)
@@ -75,7 +74,7 @@ return:
 stop:
 	#ends code
 .data 
-	size: .word 6
+	size: .word 24			#number of BYTES 
 	array: .word 5 8 -8 7 -1 5
 	signedData: .word 0 0 1 1
 	order: .word 0 1 0 1

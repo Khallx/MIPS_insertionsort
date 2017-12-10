@@ -1,0 +1,58 @@
+ Address    Code        Basic                     Source
+
+0x00400000  0x2004000c  addi $4,$0,0x0000000c 6    	addi $a0, $0, 12	#a0 should stop when a0 = 0
+0x00400004  0x3c010040  lui $1,0x00001001     10   	la $s6, order
+0x00400008  0x343600d0  ori $22,$1,0x0000002c
+0x0040000c  0x3c010040  lui $1,0x00001001     11   	la $s7, signedData
+0x00400010  0x343700c0  ori $23,$1,0x0000001c
+0x00400014  0x02c4b020  add $22,$22,$4        13   	add $s6, $s6, $a0	#sets the value of order
+0x00400018  0x02e4b820  add $23,$23,$4        14   	add $s7, $s7, $a0	#sets the value of signedData
+0x0040001c  0x3c010040  lui $1,0x00001001     18   	la $s1, array	 	#s1 holds pointer to array
+0x00400020  0x343100a8  ori $17,$1,0x00000004
+0x00400024  0x3c010040  lui $1,0x00001001     19   	la $s2, size
+0x00400028  0x343200a4  ori $18,$1,0x00000000
+0x0040002c  0x8e520000  lw $18,0x00000000($18)20   	lw $s2, 0($s2) 	        #s2 holds size value
+0x00400030  0x8ed60000  lw $22,0x00000000($22)22   	lw $s6, 0($s6)          #s6 holds order
+0x00400034  0x8ef70000  lw $23,0x00000000($23)23   	lw $s7, 0($s7)          #s7 holds signedData
+0x00400038  0x20090004  addi $9,$0,0x00000004 24   	addi $t1, $0, 4		#i <- 1 (4bytes of width)
+0x0040003c  0x11320016  beq $9,$18,0x00000016 27   	beq $t1, $s2 return    #if i < size
+0x00400040  0x01315020  add $10,$9,$17        29   	add $t2, $t1, $s1      #t2 holds pointer to array[i]
+0x00400044  0x8d530000  lw $19,0x00000000($10)30   	lw $s3, 0($t2)         #s3 holds eleito variable	eleito = array[i]
+0x00400048  0x212bfffc  addi $11,$9,0xfffffffc31   	addi $t3, $t1, -4      #t3 holds j variable		j = i -1
+0x0040004c  0x0160682a  slt $13,$11,$0        34   	slt $t5, $t3, $0	#j must be bigger than 0 so, if j < 0, set t5 to 1
+0x00400050  0x15a0000c  bne $13,$0,0x0000000c 35   	bne $t5, $0, for_inc	#if j < 0, exit the loop
+0x00400054  0x022b7020  add $14,$17,$11       38   	add $t6, $s1, $t3	#t6 holds pointer to array[j]
+0x00400058  0x8dd40000  lw $20,0x00000000($14)39   	lw  $s4, 0($t6)		#s4 holds array[j]
+0x0040005c  0x10170002  beq $0,$23,0x00000002 42   	beq $0, $s7, unsigned	#if signedData is 0, we make an unsigned comparison
+0x00400060  0x0274782a  slt $15,$19,$20       44   	slt $t7, $s3, $s4	#t7 holds (eleito < array[j])
+0x00400064  0x10000001  beq $0,$0,0x00000001  45   	beq $0, $0, sorting_comparison	#a poor man's unconditional jump
+0x00400068  0x0274782b  sltu $15,$19,$20      47   	sltu $t7, $s3, $s4      # eleito < array[j], but unsigned
+0x0040006c  0x01f6c026  xor $24,$15,$22       51   	xor $t8, $t7, $s6 	# order xor (eleito < array[j])
+0x00400070  0x17000004  bne $24,$0,0x00000004 52   	bne $t8, $0, for_inc	#if (ordern XNOR (eleito < array[j]) then leave loop
+0x00400074  0x21ce0004  addi $14,$14,0x000000055   	addi $t6, $t6, 4	#pointer to array[j+1]
+0x00400078  0xadd40000  sw $20,0x00000000($14)56   	sw   $s4, 0($t6)	# array[j+1] = array[j]
+0x0040007c  0x216bfffc  addi $11,$11,0xfffffff57   	addi $t3, $t3, -4 	#j--
+0x00400080  0x1000fff2  beq $0,$0,0xfffffff2  58   	beq $0, $0, while_comparison	#reset the loop
+0x00400084  0x022b7020  add $14,$17,$11       61   	add $t6, $s1, $t3	#t6 holds pointer to array[j]
+0x00400088  0x21ce0004  addi $14,$14,0x000000062   	addi $t6, $t6, 4	#pointer to array[j+1]
+0x0040008c  0xadd30000  sw $19,0x00000000($14)63   	sw  $s3, 0($t6) 	#array[j+1] = eleito
+0x00400090  0x21290004  addi $9,$9,0x00000004 65   	addi $t1, $t1, 4	#i++
+0x00400094  0x1000ffe9  beq $0,$0,0xffffffe9  66   	beq $0, $0, for_comparison	#returns to the begging of loop
+0x00400098  0x10800002  beq $4,$0,0x00000002  71   	beq $a0, $0, stop	#stops the program after testing
+0x0040009c  0x2084fffc  addi $4,$4,0xfffffffc 72   	addi $a0, $a0, -4	#a0 --
+0x004000a0  0x1000ffd8  beq $0,$0,0xffffffd8  73   	beq $0, $0, start	#resets the program
+0x004000a4  0x00000018  size (REMEMBER THAT THIS THE NUMBER OF BYTES IN HEXADECIMALS)
+0x004000a8  0x00000005  array
+0x004000ac  0x00000008
+0x004000b0  0xfffffff8
+0x004000b4  0x00000007
+0x004000b8  0xffffffff
+0x004000bc  0x00000005
+0x004000c0  0x00000000  signedData
+0x004000c4  0x00000000
+0x004000c8  0x00000001
+0x004000cc  0x00000001
+0x004000d0  0x00000000  order
+0x004000d4  0x00000001
+0x004000d8  0x00000000
+0x004000dc  0x00000001
