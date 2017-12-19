@@ -9,8 +9,8 @@ z2
 cModel Technology
 Z0 dE:/UFSM/Projeto de sistemas digitais/Trabalho 2/MIPS multiciclo
 Ealu
-Z1 w1512609831
-Z2 DPx4 work 12 mips_package 0 22 SBe6OQd1=g5cKAGNeDcWS1
+Z1 w1512929551
+Z2 DPx4 work 12 mips_package 0 22 A]OGl>b[D9^dnSI?9L73?0
 Z3 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
 Z4 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
 Z5 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
@@ -23,9 +23,9 @@ V0b?R?Zbl94SN2]EJ=oRjR0
 !s100 BNlhX69?iWRSbTCz7blIA0
 Z8 OP;C;10.4a;61
 32
-Z9 !s110 1512612912
+Z9 !s110 1512929560
 !i10b 1
-Z10 !s108 1512612911.000000
+Z10 !s108 1512929560.000000
 Z11 !s90 -reportprogress|300|ALU.vhd|
 Z12 !s107 ALU.vhd|
 !i113 1
@@ -39,8 +39,8 @@ R5
 Z14 DEx4 work 3 alu 0 22 0b?R?Zbl94SN2]EJ=oRjR0
 l25
 L21
-VWOXNNTYB]ZL:ba2@8?;g<1
-!s100 WMPj=^e4a3Q0k>mMdh1US0
+V3IL@ZDdlbf124koZj]_`a3
+!s100 L3:b0518^]?VC]Beo6KkM2
 R8
 32
 R9
@@ -52,7 +52,7 @@ R12
 o-O0
 R13
 Econtrolpath
-Z15 w1512613007
+Z15 w1512776143
 R3
 R2
 R4
@@ -66,9 +66,9 @@ V?C@>RzPVb?gS4NljXB6JD3
 !s100 _I8HO^@DfNMBF=3KmQDO11
 R8
 32
-Z18 !s110 1512613014
+Z18 !s110 1512776482
 !i10b 1
-Z19 !s108 1512613014.000000
+Z19 !s108 1512776482.000000
 Z20 !s90 -reportprogress|300|controlpath.vhd|
 Z21 !s107 controlpath.vhd|
 !i113 1
@@ -82,8 +82,8 @@ R5
 Z22 DEx4 work 11 controlpath 0 22 ?C@>RzPVb?gS4NljXB6JD3
 l31
 L15
-VSReB6OgY5`UgN0=Ida[Rg2
-!s100 CDjkG2i8A5Adjo96@_nZ@1
+VPjLPKGUmQ::]5Gc:NKT9>2
+!s100 ZIJ:YS`doAII;Bz1:`m7d1
 R8
 32
 R18
@@ -95,7 +95,7 @@ R21
 o-O0
 R13
 Edatapath
-Z23 w1512613041
+Z23 w1512775795
 R2
 R3
 R4
@@ -109,9 +109,9 @@ Vk>QfOT=E>7hc9_l^PX^^73
 !s100 `OPYGa?>GHLoF=CX]Fl:l0
 R8
 32
-Z26 !s110 1512613050
+Z26 !s110 1512776479
 !i10b 1
-Z27 !s108 1512613050.000000
+Z27 !s108 1512776479.000000
 Z28 !s90 -reportprogress|300|datapath.vhd|
 Z29 !s107 datapath.vhd|
 !i113 1
@@ -119,8 +119,8 @@ o-O0
 R13
 Astructural
 R14
-Z30 DEx4 work 12 registerfile 0 22 =>Vzjo4EX115hYSWnWDOF0
-Z31 DEx4 work 13 registernbits 0 22 k^mbK<?KDXkJHh_eneD_T3
+Z30 DEx4 work 12 registerfile 0 22 C9clfHiWF44K4dL2njbA]3
+Z31 DEx4 work 13 registernbits 0 22 <g9>QYf;]ai2mo]2lKef40
 R2
 R3
 R4
@@ -128,8 +128,8 @@ R5
 Z32 DEx4 work 8 datapath 0 22 k>QfOT=E>7hc9_l^PX^^73
 l30
 L23
-Vezk0c;lfN5<?OTbdczOD@2
-!s100 UiIBd<zCW9z27bUhEZlVO0
+V?oHVck<kJ6FWSfgXeN7PW1
+!s100 Hgm=[B?M<njfcB`;MhVi73
 R8
 32
 R26
@@ -142,36 +142,36 @@ o-O0
 R13
 Ememory
 Z33 w1512610942
-Z34 DPx4 work 12 util_package 0 22 bDK8n0l6Ye53Dhe>34H4^1
+Z34 DPx4 work 12 util_package 0 22 G@CCl0P=9LF_LVKVjiKGd2
 R3
 R4
 R5
 R0
-Z35 8Memory.vhd
-Z36 FMemory.vhd
+Z35 8E:/UFSM/Projeto de sistemas digitais/Trabalho 2/MIPS multiciclo/Memory.vhd
+Z36 FE:/UFSM/Projeto de sistemas digitais/Trabalho 2/MIPS multiciclo/Memory.vhd
 l0
 L13
-VhLRF>lJ026coi<CS1lElV1
+VK3kzeT7RZ0mZW4;aK:j4Z0
 !s100 `GCmadKL:40CnjiiLAa^;3
 R8
 32
-Z37 !s110 1512613239
+Z37 !s110 1512693279
 !i10b 1
-Z38 !s108 1512613239.000000
-Z39 !s90 -reportprogress|300|Memory.vhd|
-Z40 !s107 Memory.vhd|
+Z38 !s108 1512693279.000000
+Z39 !s90 -reportprogress|300|-work|work|E:/UFSM/Projeto de sistemas digitais/Trabalho 2/MIPS multiciclo/Memory.vhd|
+Z40 !s107 E:/UFSM/Projeto de sistemas digitais/Trabalho 2/MIPS multiciclo/Memory.vhd|
 !i113 1
-o-O0
+Z41 o-work work -O0
 R13
 Abehavioral
 R34
 R3
 R4
 R5
-Z41 DEx4 work 6 memory 0 22 hLRF>lJ026coi<CS1lElV1
+Z42 DEx4 work 6 memory 0 22 K3kzeT7RZ0mZW4;aK:j4Z0
 l121
 L29
-V9=6Mn?E3;W>mndM@gf<>Y2
+VZa3mJ>UIgJ1EW:DNedg9R0
 !s100 1^V>S8Y=9bL2BEcUQSW2H1
 R8
 32
@@ -181,52 +181,52 @@ R38
 R39
 R40
 !i113 1
-o-O0
+R41
 R13
 Emips_multiciclo
-Z42 w1512613526
+Z43 w1512925780
 R2
 R3
 R4
 R5
 R0
-Z43 8tb_MIPS.vhd
-Z44 Ftb_MIPS.vhd
+Z44 8tb_MIPS.vhd
+Z45 Ftb_MIPS.vhd
 l0
 L7
 VZ>[DUN=T6ahn9Vn3A90E=0
 !s100 6>QJ0PSWeMo7F@jn_FM412
 R8
 32
-Z45 !s110 1512613532
+Z46 !s110 1512929564
 !i10b 1
-Z46 !s108 1512613532.000000
-Z47 !s90 -reportprogress|300|tb_MIPS.vhd|
-Z48 !s107 tb_MIPS.vhd|
+Z47 !s108 1512929563.000000
+Z48 !s90 -reportprogress|300|tb_MIPS.vhd|
+Z49 !s107 tb_MIPS.vhd|
 !i113 1
 o-O0
 R13
 Astructural
 R34
-R41
+R42
 R32
 R22
 R2
 R3
 R4
 R5
-DEx4 work 15 mips_multiciclo 0 22 Z>[DUN=T6ahn9Vn3A90E=0
+Z50 DEx4 work 15 mips_multiciclo 0 22 Z>[DUN=T6ahn9Vn3A90E=0
 l22
 L11
-VJl6QKDGcnLSMWeZb4I7J61
-!s100 GJhPc1cdcAfhb`<Tdgh@o2
+Z51 V[ECHWTC8IAEa7[TQ4E>Bd2
+Z52 !s100 W<AV=26dSHR==o4NSVY812
 R8
 32
-R45
-!i10b 1
 R46
+!i10b 1
 R47
 R48
+R49
 !i113 1
 o-O0
 R13
@@ -236,43 +236,43 @@ R4
 R5
 w1512612817
 R0
-8MIPS_package.vhd
-FMIPS_package.vhd
+8E:/UFSM/Projeto de sistemas digitais/Trabalho 2/MIPS multiciclo/MIPS_package.vhd
+FE:/UFSM/Projeto de sistemas digitais/Trabalho 2/MIPS multiciclo/MIPS_package.vhd
 l0
 L5
-VSBe6OQd1=g5cKAGNeDcWS1
+VA]OGl>b[D9^dnSI?9L73?0
 !s100 k<WhLaXzN296Ma35?UmYN0
 R8
 32
-!s110 1512612908
+R37
 !i10b 1
-!s108 1512612908.000000
-!s90 -reportprogress|300|MIPS_package.vhd|
-!s107 MIPS_package.vhd|
+R38
+!s90 -reportprogress|300|-work|work|E:/UFSM/Projeto de sistemas digitais/Trabalho 2/MIPS multiciclo/MIPS_package.vhd|
+!s107 E:/UFSM/Projeto de sistemas digitais/Trabalho 2/MIPS multiciclo/MIPS_package.vhd|
 !i113 1
-o-O0
+R41
 R13
 Eregisterfile
-Z49 w1512582115
+Z53 w1512582115
 R3
 R4
 R5
 R0
-Z50 8RegisterFile.vhd
-Z51 FRegisterFile.vhd
+Z54 8E:/UFSM/Projeto de sistemas digitais/Trabalho 2/MIPS multiciclo/RegisterFile.vhd
+Z55 FE:/UFSM/Projeto de sistemas digitais/Trabalho 2/MIPS multiciclo/RegisterFile.vhd
 l0
 L12
-V=>Vzjo4EX115hYSWnWDOF0
+VC9clfHiWF44K4dL2njbA]3
 !s100 Ahg4AVOZ6W;Yh?U?fF5Ph3
 R8
 32
-Z52 !s110 1512609641
+Z56 !s110 1512693280
 !i10b 1
-Z53 !s108 1512609641.000000
-Z54 !s90 -reportprogress|300|RegisterFile.vhd|
-Z55 !s107 RegisterFile.vhd|
+R38
+Z57 !s90 -reportprogress|300|-work|work|E:/UFSM/Projeto de sistemas digitais/Trabalho 2/MIPS multiciclo/RegisterFile.vhd|
+Z58 !s107 E:/UFSM/Projeto de sistemas digitais/Trabalho 2/MIPS multiciclo/RegisterFile.vhd|
 !i113 1
-o-O0
+R41
 R13
 Abehavioral
 R3
@@ -281,17 +281,17 @@ R5
 R30
 l71
 L65
-VCQ91W4DWgDeFIFSY`;`Fa0
+V0RTPO3^^:oJmEHAiJz5CE0
 !s100 PIV:`[ddAGfzMIoF>2PJ`1
 R8
 32
-R52
+R56
 !i10b 1
-R53
-R54
-R55
+R38
+R57
+R58
 !i113 1
-o-O0
+R41
 R13
 Astructural
 R31
@@ -301,39 +301,39 @@ R5
 R30
 l32
 L26
-VLA1Em^d0c6XI5o70e6GzW0
+VgS`_kh?[D=H34U5M<;2Ea0
 !s100 =NdG^GM5KHa8`OmZ8kGjY2
 R8
 32
-R52
+R56
 !i10b 1
-R53
-R54
-R55
+R38
+R57
+R58
 !i113 1
-o-O0
+R41
 R13
 Eregisternbits
-R49
+R53
 R3
 R4
 R5
 R0
-Z56 8RegisterNbits.vhd
-Z57 FRegisterNbits.vhd
+Z59 8E:/UFSM/Projeto de sistemas digitais/Trabalho 2/MIPS multiciclo/RegisterNbits.vhd
+Z60 FE:/UFSM/Projeto de sistemas digitais/Trabalho 2/MIPS multiciclo/RegisterNbits.vhd
 l0
 L11
-Vk^mbK<?KDXkJHh_eneD_T3
+V<g9>QYf;]ai2mo]2lKef40
 !s100 NRQMEdZ8WTdUfi<]DYGn^3
 R8
 32
-Z58 !s110 1512609637
+R56
 !i10b 1
-Z59 !s108 1512609637.000000
-Z60 !s90 -reportprogress|300|RegisterNbits.vhd|
-Z61 !s107 RegisterNbits.vhd|
+Z61 !s108 1512693280.000000
+Z62 !s90 -reportprogress|300|-work|work|E:/UFSM/Projeto de sistemas digitais/Trabalho 2/MIPS multiciclo/RegisterNbits.vhd|
+Z63 !s107 E:/UFSM/Projeto de sistemas digitais/Trabalho 2/MIPS multiciclo/RegisterNbits.vhd|
 !i113 1
-o-O0
+R41
 R13
 Abehavioral
 R3
@@ -342,39 +342,39 @@ R5
 R31
 l27
 L26
-VY19icz38Rgb=<TDdSWmF20
+V^f8BUHjV2OOhb=_^`RV981
 !s100 H_bA0EnZGdTaEe_`YljUB1
 R8
 32
-R58
+R56
 !i10b 1
-R59
-R60
 R61
+R62
+R63
 !i113 1
-o-O0
+R41
 R13
 Putil_package
 R4
 R5
-Z62 w1512610943
+Z64 w1512610943
 R0
-Z63 8Util_package.vhd
-Z64 FUtil_package.vhd
+Z65 8E:/UFSM/Projeto de sistemas digitais/Trabalho 2/MIPS multiciclo/Util_package.vhd
+Z66 FE:/UFSM/Projeto de sistemas digitais/Trabalho 2/MIPS multiciclo/Util_package.vhd
 l0
 L9
-VbDK8n0l6Ye53Dhe>34H4^1
+VG@CCl0P=9LF_LVKVjiKGd2
 !s100 OSdg1mERAhRCb_f^9[Y?i2
 R8
 32
 b1
-Z65 !s110 1512613237
+R56
 !i10b 1
-Z66 !s108 1512613237.000000
-Z67 !s90 -reportprogress|300|Util_package.vhd|
-Z68 !s107 Util_package.vhd|
+R61
+Z67 !s90 -reportprogress|300|-work|work|E:/UFSM/Projeto de sistemas digitais/Trabalho 2/MIPS multiciclo/Util_package.vhd|
+Z68 !s107 E:/UFSM/Projeto de sistemas digitais/Trabalho 2/MIPS multiciclo/Util_package.vhd|
 !i113 1
-o-O0
+R41
 R13
 Bbody
 R34
@@ -382,16 +382,16 @@ R4
 R5
 l0
 L22
-Vg_D9T]QGT8V;G?JZ67>nj2
+VfDalBAmanWF7`Ra`gMXkz0
 !s100 0W3X[4TW1iDH_HN<LzY=g2
 R8
 32
-R65
+R56
 !i10b 1
-R66
+R61
 R67
 R68
 !i113 1
-o-O0
+R41
 R13
 nbody
