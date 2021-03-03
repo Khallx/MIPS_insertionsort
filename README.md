@@ -1,3 +1,21 @@
 # MIPS_insertionsort
 
-    This VHDL implementation of MIPS seeks to implement a few of the architecture's instructions in order to run the InsertionSort algorithim.    The current version uses:        add, addi, sw, lw, sll, slt, sltu, xor, lui, ori, beq, bne.     We use the MARS simulator to test the code and assemble it. 
+    # MIPS subset architecture CPU
+    
+    This VHDL implementation of MIPS seeks to implement a few of the architecture's instructions in order to run the InsertionSort algorithim.
+    
+    The current version implements:
+    * add, 
+    * addi, 
+    * sw, 
+    * lw, 
+    * sll, 
+    * slt, 
+    * sltu, 
+    * xor, 
+    * lui, 
+    * ori, 
+    * beq, 
+    * bne.     
+ 
+    The MARS simulator is used to test the code and assemble it. 
